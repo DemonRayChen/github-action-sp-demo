@@ -4,9 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @SpringBootApplication
 @Controller
+@RequestMapping
 public class SpringActionSpDemoApplication {
 
     public static void main(String[] args) {
@@ -14,6 +17,7 @@ public class SpringActionSpDemoApplication {
     }
 
     @GetMapping("/")
+    @ResponseBody
     public static String home() {
         return "Hello World!";
     }
