@@ -22,5 +22,5 @@ WORKDIR /app
 # 复制生成的 jar 包
 COPY --from=builder /app/build/libs/*.jar app.jar
 
-EXPOSE 8080
+EXPOSE 80
 ENTRYPOINT ["java", "-jar", "app.jar"]
