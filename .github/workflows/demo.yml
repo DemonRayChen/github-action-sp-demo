@@ -40,4 +40,4 @@ jobs:
             docker pull ${{ secrets.REGISTRY_HOST }}/${{ secrets.REGISTRY_USERNAME }}/spring-action-sp-demo:latest
             docker stop spring-action-sp-demo || true
             docker rm spring-action-sp-demo || true
-            docker run -d --name spring-action-sp-demo -p 10080:80 ${{ secrets.REGISTRY_HOST }}/${{ secrets.REGISTRY_USERNAME }}/spring-action-sp-demo:latest
+            docker run -d --name spring-action-sp-demo -p 10080:8080 ${{ secrets.REGISTRY_HOST }}/${{ secrets.REGISTRY_USERNAME }}/spring-action-sp-demo:latest
